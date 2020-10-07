@@ -16,14 +16,25 @@
 
 	<properties>
 		<java.version>1.8</java.version>
+		<sonar.buildString>
+			[sonar.projectKey=com.api:API-Rest,
+			 sonar.host.url=http://localhost:9000,
+			 sonar.login=855a75166523001c12cf92fb0babc3dff3a12a9a]
+		</sonar.buildString>
 	</properties>
+
+	<packaging>war</packaging>
 
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>provided</scope>
+		</dependency>
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
@@ -43,12 +54,19 @@
 	</dependencies>
 
 	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-		</plugins>
+		<pluginManagement>
+	        <plugins>
+	            <plugin>
+	                <groupId>org.sonarsource.scanner.maven</groupId>
+	                <artifactId>sonar-maven-plugin</artifactId>
+	                <version>3.4.0.905</version>
+	            </plugin>
+	            <plugin>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-maven-plugin</artifactId>
+				</plugin>
+	        </plugins>
+	    </pluginManagement>
 	</build>
 
 </project>
