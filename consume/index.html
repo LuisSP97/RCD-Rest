@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Rest</title>
+    <script src="./consume.js"></script>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+</head>
+
+<header>
+    <nav class="navbar" style="background-color: #5ED0FF;">
+        <span class="navbar-brand mb-0 h1">Trabajo nº1 RCD</span>
+    </nav>
+</header>
+
+<body>
+    <div class="container row">
+        <div class="col mt-3">
+            <form>
+                <div class="form-group">
+                    <label for="inputRut">Rut</label>
+                    <input type="text" class="form-control" id="inputRut" aria-describedby="rutHelp">
+                    <small id="rutHelp" class="form-text text-muted">Formato rut: 12.345.678-9</small>
+                </div>
+                <buton onclick="validar()" class="btn btn-primary">Validar</button>
+            </form>
+        </div>
+        <div class="col mt-3" id='root'>
+
+        </div>
+    </div>
+</body>
+
+</html>
