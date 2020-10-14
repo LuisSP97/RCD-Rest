@@ -5,3 +5,13 @@ body {
 .menu {
     background-color: #5ED0FF;
 }
+
+.mensaje {
+    width: 30rem;
+}
+
+.inicio {
+    border-style: solid;
+    border-color: #5ED0FF;
+    border-radius: 2rem;
+}
