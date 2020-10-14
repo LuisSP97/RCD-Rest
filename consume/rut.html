@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>API Rest</title>
+    <title>Validar RUT</title>
     <script src="./consume.js"></script>
     <link rel="stylesheet" href="./css/bootstrap.css">
     <link rel="stylesheet" href="./css/style.css">
@@ -34,6 +34,20 @@
 </header>
 
 <body>
+    <div class="container mt-4 mb-4">
+        <h1>Validador de RUT</h1>
+        <form>
+            <div class="form-group">
+                <label for="inputRut">Rut</label>
+                <input type="text" class="form-control" id="inputRut" aria-describedby="rutHelp">
+                <small id="rutHelp" class="form-text text-muted">Formato rut: 12.345.678-9</small>
+            </div>
+            <buton onclick="validarRut()" class="btn btn-primary">Validar</button>
+        </form>
+    </div>
+    <div id="root">
+
+    </div>
 </body>
 
 </html>

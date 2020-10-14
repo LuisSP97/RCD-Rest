@@ -1,7 +1,7 @@
-function validar() {
+function validarRut() {
     let rut = document.getElementById('inputRut').value;
     let isValido
-    fetch('http://localhost:8080/validar?rut=' + rut)
+    fetch('http://localhost:8080/API-Rest/validar?rut=' + rut)
         .then(response => response.json())
         .then(function(json) {
             isValido = json.valido
@@ -16,14 +16,24 @@ function validar() {
 function mensajeValido() {
     limpiar()
     let mensaje = document.createElement('div')
-    mensaje.innerHTML = '<h1>Valido</h1>'
+    mensaje.innerHTML = '<div class="jumbotron jumbotron-fluid bg-success text-white container fadeIn" style="width: 30rem;">' +
+                        '<h3 class="text-center mb-2">Resultado:</h3>'+
+                        '<div class="container text-center">' +
+                        '<p>El RUT es valido, Hurra 😄!</p>' +
+                        '</div>' +
+                        '</div>'
     document.getElementById('root').appendChild(mensaje)
 }
 
 function mensajeNoValido() {
     limpiar()
     let mensaje = document.createElement('div')
-    mensaje.innerHTML = '<h1>no Valido</h1>'
+    mensaje.innerHTML = '<div class="jumbotron jumbotron-fluid bg-danger text-white container fadeIn" style="width: 30rem;">' +
+                        '<h3 class="text-center mb-2">Resultado:</h3>' +
+                        '<div class="container text-center">' +
+                        '<p>El RUT no es valido! 😞</p>' +
+                        '</div>' +
+                        '</div>'
     document.getElementById('root').appendChild(mensaje)
 }
 

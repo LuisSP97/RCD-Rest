@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class ValidadorRutController {
 	
-	
 	@GetMapping("/validar")
 	public ValidadorRut validador(@RequestParam(value = "rut") String rut) {
 		boolean valido = false;
