@@ -28,6 +28,8 @@ public class ValidadorRut {
 		this.valido = valido;
 	}
 	
+	
+	//Functions 
 	public static boolean validarRut(String rut, boolean valido) {
 	    try {
 	        rut =  rut.toUpperCase();
