@@ -3,7 +3,7 @@ function validarRut() {
     let parameters = '?rut=' + rut
     let isValido
     if (rut) {
-        fetch('http://localhost:8080/API-Rest/validar' + parameters)
+        fetch('http://localhost:8080/API-Rest-1.0/validar' + parameters)
             .then(response => response.json())
             .then(function(json) {
                 isValido = json.valido
@@ -25,10 +25,11 @@ function formatoNombre() {
     let genero = document.getElementById('inputGenero').value
     let resultado
     let parameters = '?nombres=' + nombres + '&apPaterno=' + apPaterno + '&apMaterno=' + apMaterno + '&genero=' + genero
-    fetch('http://localhost:8080/API-Rest/nombre' + parameters)
+    console.log(parameters)
+    fetch('http://localhost:8080/API-Rest-1.0/nombre' + parameters)
         .then(response => response.json())
         .then(function(json) {
-            resultado = json.nombrePropio
+            resultado = json.resultado
             if (resultado) {
                 mensajeNombre(resultado)
             } else {
