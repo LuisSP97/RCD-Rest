@@ -7,15 +7,15 @@ public class NombrePropio {
 	String apPaterno;
 	String apMaterno;
 	String genero;
-	String nombrePropio;
+	String resultado;
 
 	//Getters and Setters
-	public String getNombrePropio() {
-		return nombrePropio;
+	public String getResultado() {
+		return resultado;
 	}
 
-	public void setNombrePropio(String nombrePropio) {
-		this.nombrePropio = nombrePropio;
+	public void setNombrePropio(String resultado) {
+		this.resultado = resultado;
 	}
 	public String getNombres() {
 		return nombres;
@@ -50,13 +50,13 @@ public class NombrePropio {
 	}
 	
 	//Constructor
-	public NombrePropio(String nombres, String apPaterno, String apMaterno, String genero, String nombrePropio) {
+	public NombrePropio(String nombres, String apPaterno, String apMaterno, String genero, String resultado) {
 		super();
 		this.nombres = nombres;
 		this.apPaterno = apPaterno;
 		this.apMaterno = apMaterno;
 		this.genero = genero;
-		this.nombrePropio = nombrePropio;
+		this.resultado = resultado;
 	}
 
 	//Functions
