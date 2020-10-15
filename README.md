@@ -40,19 +40,19 @@ En caso de que se desee desarrollar sobre ella debes hacer lo siguiente:
 ## Construido con
 Las herramientas utilizadas para el desarrollo de este proyecto fueron las siguientes:
 _API Rest_
-```
+
   * [Java](https://www.oracle.com/cl/java/technologies/javase/javase-jdk8-downloads.html) - Lenguaje de programación
   * [Spring Boot](https://spring.io/) - Framework de Java
   * [Maven](http://maven.apache.org/) - Manejador de dependencias
-```
+
 
 _Cliente_
-```
+
   * HTML
   * CSS
   * JS
   * Fetch API - API de JS para realizar peticiones http/https a los webservices
-```
+
 
 ## Autores
 
